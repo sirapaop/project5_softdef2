@@ -7,11 +7,13 @@ const collection = require("./mongodb")
 
 const tempelatePath = path.join(__dirname, '../views')
 
+
 app.use(express.json())
 app.set('view engine','hbs');
 app.set("views", tempelatePath)
 app.use(express.urlencoded({extended:false}))
-
+app.use(express.static(path.join("public")));
+app.use(express.static(path.join("src")));
 app.get("/",(req,res) =>{
     // res.send("Hello")
     res.render("login")
@@ -42,12 +44,11 @@ app.post("/login", async (req,res)=>{
             res.render("home")
   
         }
-        else{
-            res.send("wrong password")
-        }
+
     }
     catch{
-        res.send("wrong detail")
+        res.render("login", {error: "Invalid username/password combination"})
+        //res.send("wrong detail")
     }
     
     })
