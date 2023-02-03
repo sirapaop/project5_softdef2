@@ -3,7 +3,8 @@ const app = express()
 const path = require("path")
 const hbs = require("hbs")
 const collection = require("./mongodb")
-//const { Collection } = require("mongoose")
+//const user = require("../model/user")
+
 const tempelatePath = path.join(__dirname, '../views')
 
 app.use(express.json())

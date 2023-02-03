@@ -8,7 +8,7 @@
 //     password:{
 //         type: String,
 //         required: true
-//     },
+//     }
 // })
 
 // const collection = new mongoose.model("Collection1", LogInSchema)
