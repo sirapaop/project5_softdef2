@@ -13,7 +13,7 @@ mongoose.connect(dbConfig.url)
 })
 
 const LogInSchema = new mongoose.Schema({
-    name:{
+    email:{
         type: String,
         required: true
     },
