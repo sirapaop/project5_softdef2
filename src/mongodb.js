@@ -12,6 +12,9 @@ mongoose.connect(dbConfig.url)
     console.log("failed to connect");
 })
 
+
+// model user
+
 const LogInSchema = new mongoose.Schema({
     email:{
         type: String,
@@ -20,7 +23,28 @@ const LogInSchema = new mongoose.Schema({
     password:{
         type: String,
         required: true
-    }
+    },
+    name:{
+        type: String,
+        require: true
+    },
+    studentId:{
+        type: String,
+        require: true
+    },
+    year:{
+        type: String,
+        require: true
+    },
+    deptment:{
+        type: String,
+        require: true
+    },
+    address:{
+        type: String,
+        require: true
+    },
+
 })
 
 const collection = new mongoose.model("user", LogInSchema)
