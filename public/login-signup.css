@@ -48,6 +48,10 @@ body {
     margin-bottom: 2rem;
     text-align: center;
 }
+.form__header{
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
 
 .form__message {
     text-align: center;
@@ -128,3 +132,6 @@ body {
 .form__link:hover {
     text-decoration: underline;
 }
+
+
+  
