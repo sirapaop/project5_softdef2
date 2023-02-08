@@ -28,9 +28,9 @@ app.post("/signup", async (req,res)=>{
 const data ={
     email:req.body.email,
     password:req.body.password,
-    name:req.body.name,
     studentId:req.body.studentId,
-    year:req.body.year,
+    name:req.body.name,
+    Thainame:req.body.Thainame,
     deptment:req.body.deptment
 }
 

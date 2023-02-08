@@ -28,6 +28,10 @@ const LogInSchema = new mongoose.Schema({
         type: String,
         require: true
     },
+    Thainame:{
+        type: String,
+        require: true
+    },
     studentId:{
         type: String,
         require: true
