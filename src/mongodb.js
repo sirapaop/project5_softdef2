@@ -53,5 +53,6 @@ const LogInSchema = new mongoose.Schema({
 
 const collection = new mongoose.model("user", LogInSchema)
 
+
 module.exports = collection
 
