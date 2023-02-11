@@ -24,11 +24,14 @@ const LogInSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+
+
+    //profile
     name:{
         type: String,
         require: true
     },
-    Thainame:{
+    thainame:{
         type: String,
         require: true
     },
@@ -36,7 +39,7 @@ const LogInSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-    year:{
+    mentor:{
         type: String,
         require: true
     },
@@ -44,10 +47,47 @@ const LogInSchema = new mongoose.Schema({
         type: String,
         require: true
     },
+    university:{
+        type: String,
+        require: true
+    },
+
+    //contract
+    phone:{
+        type: String,
+        require: true
+    },
+    line:{
+        type: String,
+        require: true
+    },
+    fb:{
+        type: String,
+        require: true
+    },
+    ig:{
+        type: String,
+        require: true
+    },
+
+    // personal information
+    hbd:{
+        type: String,
+        require: true
+    },
+    blood:{
+        type: String,
+        require: true
+    },
     address:{
         type: String,
         require: true
     },
+    allergies:{
+        type: String,
+        require: true
+    },
+
 
 })
 

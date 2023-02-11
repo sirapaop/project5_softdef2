@@ -1,12 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>profile page</title>
+  <title>home page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="profile.css">
 </head>
 <body>
-    <H1>profile page</H1>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    
+        <a class="navbar-brand" href="#">
+            <img src="CDTI.png" style="height: 70px;">
+        </a>
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="boxcon">
+        <div class="container">
+            <div class="photo">
+                <img src="people.jpg" alt="photo">
+                <h4>Welcome to : <br>{{ user.name }}</h4>
+            
+            </div>
+            <a href="/home"><button class="btn2" type="submit">Home</button></a>
+            <a href="/grade"><button class="btn2" type="submit">Grade</button></a>
+            <a href="/simulation"><button class="btn2" type="submit">Simulation</button></a>
+        </div>
+
+        <div class="container2">
+            <div class="text-l">
+                <img src="people.jpg">
+                <h3><b>Profile</b> <hr></h3> 
+                <div class="colum">
+                    <div class="row1">
+                        <p>student ID     :</p>
+                        <p>Name           :</p>
+                        <p>TH Name        :</p>
+                        <p>Deptment       :</p>
+                        <p>University     :</p>
+                        <p>Mentor Teacher :</p>
+                    </div>
+                    <div class="row2">
+                        <p><input type="text" class="form__input" name="studentId" placeholder="student ID"></p>
+                        <p><input type="text" class="form__input" name="name" placeholder="First name and last name"></p>
+                        <p><input type="text" class="form__input" name="thainame" placeholder="ชื่อ - นามสกุล"></p>
+                        <P><input type="text" class="form__input" name="deptment" placeholder="deptment"></P>
+                        <p>สถาบันเทคโนโลยีจิตรลดา</p>
+                        <p><input type="text" class="form__input" name="mentor" placeholder="ชื่อ - นามสกุล"></p>
+                    </div>
+                </div> 
+
+            </div>
+
+            <div class="text-r">
+                <h3><b>Contract</b> <hr></h3>
+                <div class="colum">
+                    <div class="row1">
+                        <p>Email      :</p>
+                        <p>phone      :</p>
+                        <p>line ID    :</p>
+                        <p>facebook   :</p>
+                        <p>Instagram  :</p>
+                    </div>
+                    <div class="row2">
+                        <p><input type="text"  class="form__input" name="email" placeholder="Email Address"></p>
+                        <p><input type="text"  class="form__input" name="phone" placeholder="phone number"></p>
+                        <p><input type="text"  class="form__input" name="line" placeholder="line id"></p>
+                        <p><input type="text"  class="form__input" name="fb" placeholder="facebook"></p>
+                        <p><input type="text"  class="form__input" name="ig" placeholder="instagram"></p>
+                    </div>
+                </div>
+
+                <h3><b>personal information</b><hr></h3>
+                <div class="colum">
+                    <div class="row1">
+                        <p>Birth day  :</p>
+                        <p>Blood tpye :</p>
+                        <p>Address    :</p>
+                        <p>Allergies  :</p>
+                    </div>
+                    <div class="row2">
+                        <p><input type="text"  class="form__input" name="hbd" placeholder="dd/mm/yyyy"></p>
+                        <p><input type="text"  class="form__input" name="blood" placeholder="blood type"></p>
+                        <p><input type="text"  class="form__input" name="address" placeholder="Address"></p>
+                        <p><input type="text"  class="form__input" name="allergies" placeholder="allergies"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="logout" type="submit">save</button>
+    
+
 </body>
 </html>
+
+

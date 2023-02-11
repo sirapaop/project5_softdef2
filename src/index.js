@@ -63,6 +63,14 @@ app.get("/simulation",(req,res) =>{
     res.render("simulation")
 })
 
+app.get("/login", (req,res) =>{
+    res.render("login")
+})
+
+app.get("/home", (req,res) =>{
+    res.render("home")
+})
+
 
 app.post("/signup", async (req,res)=>{
 
@@ -87,7 +95,8 @@ app.post("/login", async (req,res)=>{
         if(check.password === req.body.password){
             res.render("home", {user: check})
   
-        }else{
+        }
+        else{
             res.render("login", {error: "password is wrong"}) 
         }
 
@@ -96,10 +105,12 @@ app.post("/login", async (req,res)=>{
         res.render("login", {error: "Invalid username/password combination"})
         //res.send("wrong detail")
     }
-    
+
     })
 
-
+app.post("/profile", async (req,res) =>{
+    res.render("profile", {user: check})
+})
 
 app.listen(3000, ()=>{
     console.log("port connect");

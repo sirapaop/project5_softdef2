@@ -34,19 +34,80 @@
     </nav>
     <div class="boxcon">
         <div class="container">
-            <h4>Welcome to : {{ user.name }}</h4>
-            {{!-- <button class="btn2" href="/profile" type="submit" >Profile</button> --}}
-            <a href="/profile"><button class="btn2" type="submit">Profile</button></a>
+            <div class="photo">
+                <img src="people.jpg" alt="photo">
+                <h4>Welcome to : <br>{{ user.name }}</h4>
+            
+            </div>
+            <a href="/profile"><button class="btn2" type="submit">Edit profile</button></a>
             <a href="/grade"><button class="btn2" type="submit">Grade</button></a>
             <a href="/simulation"><button class="btn2" type="submit">Simulation</button></a>
         </div>
 
         <div class="container2">
-            <p>name:</p>
-            <p>depmemt</p>
+            <div class="text-l">
+                <img src="people.jpg">
+                <h3><b>Profile</b> <hr></h3>
+                <div class="colum">
+                    <div class="row1">
+                        <p>student ID     :</p>
+                        <p>Name           :</p>
+                        <p>TH Name        :</p>
+                        <P>Deptment       :</P>
+                        <p>University     :</p>
+                        <p>Mentor Teacher :</p>
+                    </div>
+                    <div class="row2">
+                        <p>{{ user.studentId }}</p>
+                        <p>{{ user.name }}</p>
+                        <p>{{ user.thainame }}</p>
+                        <P>{{ user.deptment }}</P>
+                        <p>{{ user.university }}</p>
+                        <p>{{ user.mentor }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-r">
+                <h3><b>Contract</b> <hr></h3>
+               <div class="colum">
+                    <div class="row1">
+                        <p>Email      :</p>
+                        <p>phone      :</p>
+                        <p>line ID    :</p>
+                        <p>facebook   :</p>
+                        <p>Instagram  :</p>
+                    </div>
+                    <div class="row2">
+                        <p>{{ user.email }}</p>
+                        <p>{{ user.phone }}</p>
+                        <p>{{ user.line }} </p>
+                        <p>{{ user.fb }}   </p>
+                        <p>{{ user.ig }}   </p>  
+                    </div>
+               </div>
+                
+
+                <h3><b>personal information</b><hr></h3>
+                <div class="colum">
+                    <div class="row1">
+                        <p>Birth day  :</p>
+                        <p>Blood tpye :</p>
+                        <p>Address    :</p>
+                        <p>Allergies  :</p>
+                    </div>
+                    <div class="row2">
+                        <p>{{ user.hbd }}</p>
+                        <p>{{ user.blood }}</p>
+                        <p>{{ user.address }}</p>
+                        <p>{{ user.allergies }}</p>
+ 
+                    </div>
+                </div>
+            </div>
         </div>
-    
     </div>
+    <a href="/login"><button class="logout" type="submit">Log out</button></a>
     
 
     
