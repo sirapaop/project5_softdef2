@@ -51,6 +51,17 @@ app.get("/signup",(req,res) =>{
     res.render("signup")
 })
 
+app.get("/profile",(req,res) =>{
+    res.render("profile")
+})
+
+app.get("/grade",(req,res) =>{
+    res.render("grade")
+})
+
+app.get("/simulation",(req,res) =>{
+    res.render("simulation")
+})
 
 
 app.post("/signup", async (req,res)=>{
@@ -60,13 +71,12 @@ const data ={
     password:req.body.password,
     studentId:req.body.studentId,
     name:req.body.name,
-    Thainame:req.body.Thainame,
     deptment:req.body.deptment
 }
 
 await collection.insertMany([data])
 
-res.render("home")
+res.render("login")
 
 })
 

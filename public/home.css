@@ -1,8 +1,15 @@
 body{
+    
+    margin: 0;
     background: white;
 }
-.container{
+.boxcon  {
+    justify-content: space-between;
     display: flex;
+}
+.container{
+    /* display: flex; */
+    width: 400px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
@@ -13,11 +20,11 @@ body{
 .btn2{
     background: #000;
     color: white;
-    width: 25rem;
+    width: 30rem;
     border-radius: 30px;
     transition: all 0.25s ease;
     font-size: 5rem;
-    margin-left: 1rem;
+    margin-left: 3rem;
     margin-top: 3rem;
 }
 .btn2:hover{
@@ -34,4 +41,13 @@ body{
     transform: translate(6px, 6px);
     
 }
+
+.container2{
+    width:65%;
+    background: #000;
+    
+
+}
+
+
 

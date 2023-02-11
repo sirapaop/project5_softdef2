@@ -32,15 +32,23 @@
             </form>
         </div>
     </nav>
-    
-    <div class="container">
-        <h4>Welcome to {{ user.email }}</h4>
-        <button class="btn2" type="submit">Profile</button>
-        <button class="btn2" type="submit">Grade</button>
-        <button class="btn2" type="submit">simulation</button>
-    </div>
+    <div class="boxcon">
+        <div class="container">
+            <h4>Welcome to : {{ user.name }}</h4>
+            {{!-- <button class="btn2" href="/profile" type="submit" >Profile</button> --}}
+            <a href="/profile"><button class="btn2" type="submit">Profile</button></a>
+            <a href="/grade"><button class="btn2" type="submit">Grade</button></a>
+            <a href="/simulation"><button class="btn2" type="submit">Simulation</button></a>
+        </div>
 
+        <div class="container2">
+            <p>name:</p>
+            <p>depmemt</p>
+        </div>
     
+    </div>
+    
+
     
     
 
