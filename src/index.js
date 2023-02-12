@@ -51,8 +51,15 @@ app.get("/signup",(req,res) =>{
     res.render("signup")
 })
 
-app.get("/profile",(req,res) =>{
-    res.render("profile")
+app.get("/profile", async(req,res) =>{
+    session = req.session
+    if(session.name){
+        const check = await collection.findOne({name:session.name})
+        res.render("profile",{user: check});
+    }
+    else{
+        console.log("fail")
+    }
 })
 
 app.get("/grade",(req,res) =>{
@@ -67,8 +74,17 @@ app.get("/login", (req,res) =>{
     res.render("login")
 })
 
-app.get("/home", (req,res) =>{
-    res.render("home")
+app.get("/home", async(req,res) =>{
+    session = req.session
+    if(session.name){
+        const check = await collection.findOne({name:session.name})
+        res.render("home",{user: check});
+    }
+    else{
+        console.log("fail")
+    }
+    
+    
 })
 
 
@@ -93,6 +109,8 @@ app.post("/login", async (req,res)=>{
     try{
         const check = await collection.findOne({email:req.body.email})
         if(check.password === req.body.password){
+            session= req.session
+            session.name = check.name
             res.render("home", {user: check})
   
         }
@@ -108,30 +126,45 @@ app.post("/login", async (req,res)=>{
 
     })
 
-app.post("/profile", async (req,res) =>{
-const data = {
-    email:req.body.email,
-    name:req.body.name,
-    thainame:req.body.thainame,
-    studentId:req.body.studentId,
-    mentor:req.body.mentor,
-    deptment:req.body.deptment,
-    university:req.body.university,
-
-    phone:req.body.phone,
-    line:req.body.line,
-    fb:req.body.fb,
-    ig:req.body.ig,
-
-    hbd:req.body.hbd,
-    blood:req.body.blood,
-    address:req.body.address,
-    allergies:req.body.allergies
-}
-await collection.insertMany([data])
-
-res.render("home")
+app.post("/profile/:UserId", async (req,res) =>{
+    collection.findByIdAndUpdate(req.params.UserId, {$set:{       
+        email:req.body.email,
+        name:req.body.name,
+        thainame:req.body.thainame,
+        studentId:req.body.studentId,
+        mentor:req.body.mentor,
+        deptment:req.body.deptment,
+        university:req.body.university,
+    
+        phone:req.body.phone,
+        line:req.body.line,
+        fb:req.body.fb,
+        ig:req.body.ig,
+    
+        hbd:req.body.hbd,
+        blood:req.body.blood,
+        address:req.body.address,
+        allergies:req.body.allergies
+        
+    }},{new: true})
+    .then(data =>{
+        if(!data){
+            return res.status(404).json({
+                msg: "ไม่พบ :" + req.params.UserId
+            })
+        }
+        else{
+            console.log("update finish")
+            res.redirect("/home")
+        }
+    }).catch(err =>{
+        return res.status(500).json({
+            msg: "ไม่สามารถอัปเดตได้ :" +err.message
+        })
+    })   
 })
+
+
 
 
 
