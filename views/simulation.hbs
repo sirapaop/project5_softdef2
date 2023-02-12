@@ -4,9 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="simulation.css">
     <title>Simulation </title>
 </head>
 <body>
-    <h1>simulation</h1>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    
+        <a class="navbar-brand" href="#">
+            <img src="CDTI.png" style="height: 70px;">
+        </a>
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <h1 style="padding-top:2rem; padding-left: 3rem ">Simulation Grade 
+        <img src="pen.png" alt="pencil" style="padding-left:2rem; width:60px;"> 
+        <a href="home" style=""><button class="logout" type="submit">back</button></a>
+        <hr></h1><br>
+    
+    <div class="row4">
+        <div class="boxcon2">
+            <div class="subject">
+                <h1>วิชา<hr></h1><br>
+                <p><input type="text" class="form__input" name="subject1" placeholder="subject1"></p>
+                <p><input type="text" class="form__input" name="subject2" placeholder="subject2"></p>
+                <p><input type="text" class="form__input" name="subject3" placeholder="subject3"></p>
+                <p><input type="text" class="form__input" name="subject4" placeholder="subject4"></p>
+                <p><input type="text" class="form__input" name="subject5" placeholder="subject5"></p>
+                <p><input type="text" class="form__input" name="subject6" placeholder="subject6"></p>
+                <p><input type="text" class="form__input" name="subject7" placeholder="subject7"></p>
+                <p><input type="text" class="form__input" name="subject8" placeholder="subject8"></p>
+            </div>
+            <div class="unit">
+                <h1>หน่วยกิต<hr></h1><br>
+                <p><input type="text" class="form__input" name="unit1" placeholder="unit1"></p>
+                <p><input type="text" class="form__input" name="unit2" placeholder="unit2"></p>
+                <p><input type="text" class="form__input" name="unit3" placeholder="unit3"></p>
+                <p><input type="text" class="form__input" name="unit4" placeholder="unit4"></p>
+                <p><input type="text" class="form__input" name="unit5" placeholder="unit5"></p>
+                <p><input type="text" class="form__input" name="unit6" placeholder="unit6"></p>
+                <p><input type="text" class="form__input" name="unit7" placeholder="unit7"></p>
+                <p><input type="text" class="form__input" name="unit8" placeholder="unit8"></p>
+            </div>
+            <div class="grade">
+                <h1>เกรด<hr></h1><br>
+                <p><input type="text" class="form__input" name="grade1" placeholder="Grade1"></p>
+                <p><input type="text" class="form__input" name="grade2" placeholder="Grade2"></p>
+                <p><input type="text" class="form__input" name="grade3" placeholder="Grade3"></p>
+                <p><input type="text" class="form__input" name="grade4" placeholder="Grade4"></p>
+                <p><input type="text" class="form__input" name="grade5" placeholder="Grade5"></p>
+                <p><input type="text" class="form__input" name="grade6" placeholder="Grade6"></p>
+                <p><input type="text" class="form__input" name="grade7" placeholder="Grade7"></p>
+                <p><input type="text" class="form__input" name="grade8" placeholder="Grade8"></p>   
+            </div>
+        </div>
+        <div class="sum">
+            <div class="gpa">
+                <h2>GPA :</h2><br>
+                <p><input type="text" class="form__input" name="gpa" placeholder="GPA"></p>
+            </div>
+            <div class="gpa">
+                <h2>GPAX :</h2><br>
+                <p><input type="text" class="form__input" name="gpax" placeholder="GPAX"></p>
+            </div>
+        
+        </div>  
+    </div>
+    <button class="logout2" type="submit">calculate</button>
+    
 </body>
 </html>
