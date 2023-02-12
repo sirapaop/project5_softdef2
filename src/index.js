@@ -109,8 +109,32 @@ app.post("/login", async (req,res)=>{
     })
 
 app.post("/profile", async (req,res) =>{
-    res.render("profile", {user: check})
+const data = {
+    email:req.body.email,
+    name:req.body.name,
+    thainame:req.body.thainame,
+    studentId:req.body.studentId,
+    mentor:req.body.mentor,
+    deptment:req.body.deptment,
+    university:req.body.university,
+
+    phone:req.body.phone,
+    line:req.body.line,
+    fb:req.body.fb,
+    ig:req.body.ig,
+
+    hbd:req.body.hbd,
+    blood:req.body.blood,
+    address:req.body.address,
+    allergies:req.body.allergies
+}
+await collection.insertMany([data])
+
+res.render("home")
 })
+
+
+
 
 app.listen(3000, ()=>{
     console.log("port connect");

@@ -160,3 +160,84 @@ body{
 }
 
 
+.boxcon2{
+overflow: hidden;
+display: flex;
+width: 100%;
+
+
+}
+.subject{
+    padding-top: 1rem;
+    padding-left: 4rem;
+    width: 40%;
+    background: bisque;
+}
+
+.unit{
+    padding-top: 1rem;
+    padding-left: 4rem;
+    background: #429EBD;
+    width: 30%;
+
+}
+.grade{
+    padding-top: 1rem;
+    background: #E6E6E6;
+    padding-left: 4rem;
+    width: 30%;
+    
+}
+
+
+.logout2{
+    background: #1C1C1C;
+    color: #E6E6E6;
+    width: 12rem;
+    border-radius: 30px;
+    transition: all 0.25s ease;
+    float: right;
+    justify-content: end;
+    font-size: 2rem;
+    margin-top: -1rem;
+    margin-left: 2rem;
+    margin-right: 15rem;
+    margin-bottom: 1rem;
+}
+.logout2:hover{
+    color: yellow;
+    transform: translate(-12px, -12px);
+
+}
+.logout2:hover::before{
+    
+    transform: translate(12px, 12px);
+    
+}
+.logout2:hover::after{
+    transform: translate(6px, 6px);
+    
+}
+
+.row4{
+    width: 80%;
+    margin-left: 12rem;
+    border-radius: 3rem;
+    overflow: hidden;
+    background: #1C1C1C;
+}
+
+.sum{
+    background: #429EBD;
+    padding-left: 15rem;
+    padding-bottom: 2rem;
+    color: antiquewhite;
+}
+
+.gpa{
+    width: 80%;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    
+}
