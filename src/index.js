@@ -144,7 +144,34 @@ app.post("/profile/:UserId", async (req,res) =>{
         hbd:req.body.hbd,
         blood:req.body.blood,
         address:req.body.address,
-        allergies:req.body.allergies
+        allergies:req.body.allergies,
+
+        subject1:req.body.subject1,
+        subject2:req.body.subject2,
+        subject3:req.body.subject3,
+        subject4:req.body.subject4,
+        subject5:req.body.subject5,
+        subject6:req.body.subject6,
+        subject7:req.body.subject7,
+        subject8:req.body.subject8,
+
+        unit1:req.body.unit1,
+        unit2:req.body.unit2,
+        unit3:req.body.unit3,
+        unit4:req.body.unit4,
+        unit5:req.body.unit5,
+        unit6:req.body.unit6,
+        unit7:req.body.unit7,
+        unit8:req.body.unit8,
+
+        grade1:req.body.grade1,
+        grade2:req.body.grade2,
+        grade3:req.body.grade3,
+        grade4:req.body.grade4,
+        grade5:req.body.grade5,
+        grade6:req.body.grade6,
+        grade7:req.body.grade7,
+        grade8:req.body.grade8,
         
     }},{new: true})
     .then(data =>{

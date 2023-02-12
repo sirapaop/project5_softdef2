@@ -88,6 +88,116 @@ const LogInSchema = new mongoose.Schema({
         require: true
     },
 
+    //subject
+    subject1:{
+        type: String,
+        require: true
+    },
+    subject2:{
+        type: String,
+        require: true
+    },
+    subject3:{
+        type: String,
+        require: true
+    },
+    subject4:{
+        type: String,
+        require: true
+    },
+    subject5:{
+        type: String,
+        require: true
+    },
+    subject6:{
+        type: String,
+        require: true
+    },
+    subject7:{
+        type: String,
+        require: true
+    },
+    subject8:{
+        type: String,
+        require: true
+    },
+
+    //unit
+    unit1:{
+        type: String,
+        require: true
+    },
+    unit2:{
+        type: String,
+        require: true
+    },
+    unit3:{
+        type: String,
+        require: true
+    },
+    unit4:{
+        type: String,
+        require: true
+    },
+    unit5:{
+        type: String,
+        require: true
+    },
+    unit6:{
+        type: String,
+        require: true
+    },
+
+    unit7:{
+        type: String,
+        require: true
+    },
+    unit8:{
+        type: String,
+        require: true
+    },
+
+    //grade
+    grade1:{
+        type: String,
+        require: true
+    },
+    grade2:{
+        type: String,
+        require: true
+    },
+    grade3:{
+        type: String,
+        require: true
+    },
+    grade4:{
+        type: String,
+        require: true
+    },
+    grade5:{
+        type: String,
+        require: true
+    },
+    grade6:{
+        type: String,
+        require: true
+    },
+    grade7:{
+        type: String,
+        require: true
+    },
+    grade8:{
+        type: String,
+        require: true
+    },
+    gpa:{
+        type: String,
+        require: true
+    },
+    gpax:{
+        type: String,
+        require: true
+    },
 
 })
 

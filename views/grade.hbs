@@ -32,7 +32,7 @@
             </form>
         </div>
     </nav>
-    
+    <form action="/profile/{{user._id}}" method="post"></form>
     <div class="boxcon">
         <div class="container">
             <h1 style="padding-left: 3rem; ">Grade <img src="pen.png" alt="pencil" style="padding-left:2rem; width:80px;"></h1>
@@ -60,9 +60,9 @@
                                 
                             </div>
                             <div class="row1">
-                                <p>math{{ user.subject1 }}</p>
-                                <p>os{{ user.subject2 }}</p>
-                                <p>soft def{{ user.subject3 }}</p>
+                                <p>{{ user.subject1 }}</p>
+                                <p>{{ user.subject2 }}</p>
+                                <p>{{ user.subject3 }}</p>
                                 <p>{{ user.subject4 }}</p>
                                 <p>{{ user.subject5 }}</p>
                                 <p>{{ user.subject6 }}</p>
@@ -87,10 +87,10 @@
                     </div>
                     <div class="grade">
                         <h1>เกรด<hr></h1><br>
-                        <p>b{{ user.grade1 }}</p>
-                        <p>a{{ user.grade2 }}</p>
-                        <p>a{{ user.grade3 }}</p>
-                        <p>a{{ user.grade4 }}</p>
+                        <p>{{ user.grade1 }}</p>
+                        <p>{{ user.grade2 }}</p>
+                        <p>{{ user.grade3 }}</p>
+                        <p>{{ user.grade4 }}</p>
                         <p>{{ user.grade5 }}</p>
                         <p>{{ user.grade6 }}</p>
                         <p>{{ user.grade7 }}</p>
@@ -100,11 +100,11 @@
                 <div class="sum">
                     <div class="gpa">
                         <h2>GPA :</h2><br>
-                        <p>3.50{{user.gpa}}</p>
+                        <p>{{user.gpa}}</p>
                     </div>
                     <div class="gpa">
                         <h2>GPAX :</h2><br>
-                        <p>3.67{{user.gpa}}</p>
+                        <p>{{user.gpax}}</p>
                     </div>
                 
                 </div>  
