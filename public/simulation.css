@@ -167,10 +167,20 @@ body{
 }
 
 .sum{
-    background: #429EBD;
+    background: red;
     font-size: 20px;
-    padding-left: 15rem;
+    padding-top: 2rem;
+    /* align-items:; */
+    text-align: left;
+    padding-bottom: 2rem;
+    padding-left: 3rem; 
     color: antiquewhite;
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+.sum h2 {
+    margin-left: 2rem;
 }
 
 .gpa{
@@ -213,9 +223,12 @@ body{
     width: 30%;
     
 }
-.grade p{
+.grade select{
+    width: 60%;
+    border-radius: 2rem;
     margin: 0rem;
-    margin-bottom: 1.35rem;
+    margin-bottom: 1.7rem;
+    padding-left: 2rem;
 }
 
 .boxcon2{
@@ -235,7 +248,7 @@ body{
     float: right;
     justify-content: end;
     font-size: 2rem;
-    margin-top: -6rem;
+    margin-top: -5.2rem;
     margin-left: 2rem;
     margin-right: 12rem;
     margin-bottom: 1rem;
@@ -254,3 +267,4 @@ body{
     transform: translate(6px, 6px);
     
 }
+

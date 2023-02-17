@@ -62,8 +62,16 @@ app.get("/profile", async(req,res) =>{
     }
 })
 
-app.get("/grade",(req,res) =>{
-    res.render("grade")
+app.get("/grade", async (req,res) =>{
+    session = req.session
+    if(session.name){
+        const check = await collection.findOne({name:session.name})
+        res.render("grade",{user: check});
+    }
+    else{
+        console.log("fail")
+    }
+    
 })
 
 app.get("/simulation",(req,res) =>{
@@ -95,7 +103,7 @@ const data ={
     password:req.body.password,
     studentId:req.body.studentId,
     name:req.body.name,
-    deptment:req.body.deptment
+    // deptment:req.body.deptment
 }
 
 await collection.insertMany([data])
@@ -133,8 +141,10 @@ app.post("/profile/:UserId", async (req,res) =>{
         thainame:req.body.thainame,
         studentId:req.body.studentId,
         mentor:req.body.mentor,
+        nickname:req.body.nickname,
         deptment:req.body.deptment,
         university:req.body.university,
+        
     
         phone:req.body.phone,
         line:req.body.line,

@@ -54,16 +54,17 @@
                             <p>student ID     :</p>
                             <p>Name           :</p>
                             <p>TH Name        :</p>
+                            <p>Nickname       :</p>
                             <p>Deptment       :</p>
-                            <p>University     :</p>
                             <p>Mentor Teacher :</p>
                         </div>
                         <div class="row2">
                             <p><input type="text" class="form__input" name="studentId" value="{{ user.studentId }}"></p>
                             <p><input type="text" class="form__input" name="name" value="{{ user.name }}"></p>
                             <p><input type="text" class="form__input" name="thainame" value="{{ user.thainame }}"></p>
+                            <P><input type="text" class="form__input" name="nickname"value="{{ user.nickname }}" ></P>
                             <P><input type="text" class="form__input" name="deptment"value="{{ user.deptment }}"></P>
-                            <P><input type="text" class="form__input" name="university"value="{{ user.university }}" ></P>
+                            
                             <p><input type="text" class="form__input" name="mentor" value="{{ user.mentor }}"></p>
                         </div>
                     </div> 
@@ -108,8 +109,9 @@
             </div>
         </div>
         <button class="logout" type="submit">save</button>
+    </form>
+    <form action="/profile/{{user._id}}" method="post">
         <h1 style="padding-top:2rem; padding-left: 3rem ">Grade Edit <img src="pen.png" alt="pencil" style="padding-left:2rem; width:80px;"> <hr></h1><br>
-        
         <div class="row4">
             <div class="boxcon2">
                 <div class="subject">

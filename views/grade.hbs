@@ -32,7 +32,8 @@
             </form>
         </div>
     </nav>
-    <form action="/profile/{{user._id}}" method="post"></form>
+    
+    
     <div class="boxcon">
         <div class="container">
             <h1 style="padding-left: 3rem; ">Grade <img src="pen.png" alt="pencil" style="padding-left:2rem; width:80px;"></h1>
@@ -74,14 +75,14 @@
                     
                     <div class="unit">
                         <h1>หน่วยกิต<hr></h1><br>
-                        <p>3{{ user.unit1 }}</p>
-                        <p>3{{ user.unit2 }}</p>
-                        <p>3{{ user.unit3 }}</p>
-                        <p>3{{ user.unit4 }}</p>
-                        <p>3{{ user.unit5 }}</p>
-                        <p>3{{ user.unit6 }}</p>
-                        <p>3{{ user.unit7 }}</p>
-                        <p>3{{ user.unit8 }}</p>
+                        <p>{{ user.unit1 }}</p>
+                        <p>{{ user.unit2 }}</p>
+                        <p>{{ user.unit3 }}</p>
+                        <p>{{ user.unit4 }}</p>
+                        <p>{{ user.unit5 }}</p>
+                        <p>{{ user.unit6 }}</p>
+                        <p>{{ user.unit7 }}</p>
+                        <p>{{ user.unit8 }}</p>
 
                         
                     </div>
@@ -112,5 +113,6 @@
         </div>
     </div>
     <a href="/home"><button class="logout" type="submit">back</button></a>
+    
 </body>
 </html>

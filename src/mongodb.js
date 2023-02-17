@@ -47,6 +47,10 @@ const LogInSchema = new mongoose.Schema({
         type: String,
         require: true
     },
+    nickname:{
+        type: String,
+        require: true
+    },
     university:{
         type: String,
         require: true
