@@ -1,0 +1,270 @@
+body{
+    
+    margin: 0;
+    background: white;
+}
+.boxcon  {
+    justify-content: space-between;
+    display: flex;
+}
+.form__input{
+    font-size: 20px;
+    padding-left: 1rem;
+    border-radius: 2rem;
+
+    
+}
+.container{
+    /* display: flex; */
+    width: 400px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-left: 0%;
+}
+
+.photo{
+    display: flex;
+    align-items: center;
+    
+}
+.photo img {
+    width: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+    border-bottom: #000;
+    padding-left: 1rem;
+
+}
+.photo h4 {
+    margin-left: 4rem;
+}
+
+.btn2{
+    background: #1C1C1C;
+    color: #E6E6E6;
+    width: 30rem;
+    border-radius: 30px;
+    transition: all 0.25s ease;
+    font-size: 5rem;
+    margin-left: 3rem;
+    margin-top: 3rem;
+}
+.btn2:hover{
+    color: yellow;
+    transform: translate(-12px, -12px);
+
+}
+.btn2:hover::before{
+    
+    transform: translate(12px, 12px);
+    
+}
+.btn2:hover::after{
+    transform: translate(6px, 6px);
+    
+}
+
+
+.logout{
+    background: #1C1C1C;
+    color: #E6E6E6;
+    width: 12rem;
+    border-radius: 30px;
+    transition: all 0.25s ease;
+    float: right;
+    justify-content: end;
+    font-size: 2rem;
+    margin-top: -1rem;
+    margin-left: 2rem;
+    margin-right: 3rem;
+    margin-bottom: 1rem;
+}
+.logout:hover{
+    color: yellow;
+    transform: translate(-12px, -12px);
+
+}
+.logout:hover::before{
+    
+    transform: translate(12px, 12px);
+    
+}
+.logout:hover::after{
+    transform: translate(6px, 6px);
+    
+}
+
+.container2{
+    width: 68%;
+    background: aqua;
+    display: flex;
+    border-radius: 3rem;
+    overflow: hidden;
+    
+}
+
+.text-l{
+    width: 50%;
+    padding: 2rem;
+    padding-bottom: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background: aqua;
+}
+.text-l h3{
+    padding-top: 2rem;
+    padding-bottom:0rem ;
+}
+.text-l img {
+    width: 250px;
+    height: 300px;
+    border-radius: 5%;
+     overflow: hidden; 
+
+}
+
+.text-r{
+    background: aquamarine;
+    width: 50%;
+    padding: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    
+}
+
+.text-r h3{
+    padding-top: 2rem;
+    padding: 0rem ;
+}
+.colum{
+    display: flex;
+    width: 100%;
+}
+.row1{
+    
+    font-size: 20px;
+    width: 40%;
+    /* padding: 1rem; */
+}
+.row2{
+    width: 70%;
+    padding: 1rem;
+
+}
+
+.row1 p{
+    margin: 0rem;
+    margin-bottom: 1.35rem;
+}
+
+.row4{
+    width: 100%;
+    border-radius: 3rem;
+    overflow: hidden;
+    background: beige;
+}
+
+.sum{
+    background: red;
+    font-size: 20px;
+    padding-top: 2rem;
+    /* align-items:; */
+    text-align: left;
+    padding-bottom: 2rem;
+    padding-left: 3rem; 
+    color: antiquewhite;
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+.sum h1 {
+    margin-left: 3rem;
+}
+
+.gpa{
+    width: 80%;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.subject{
+    padding-top: 1rem;
+    padding-left: 4rem;
+    font-size: 20px;
+    width: 40%;
+    background: bisque;
+}
+.subject p {
+    margin: 0rem;
+    margin-bottom: 1.35rem; 
+}
+
+.unit{
+    padding-top: 1rem;
+    padding-left: 4rem;
+    font-size: 20px;
+    background: #429EBD;
+    width: 30%;
+
+}
+
+.unit p{
+    margin: 0rem;
+    margin-bottom: 1.35rem;
+}
+.grade{
+    padding-top: 1rem;
+    font-size: 20px;
+    background: #E6E6E6;
+    padding-left: 4rem;
+    width: 30%;
+    
+}
+.grade select{
+    width: 60%;
+    border-radius: 2rem;
+    margin: 0rem;
+    margin-bottom: 1.7rem;
+    padding-left: 2rem;
+}
+
+.boxcon2{
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    
+    
+}
+
+.logout2{
+    background: #1C1C1C;
+    color: #E6E6E6;
+    width: 12rem;
+    border-radius: 30px;
+    transition: all 0.25s ease;
+    float: right;
+    justify-content: end;
+    font-size: 2rem;
+    margin-top: -5.2rem;
+    margin-left: 2rem;
+    margin-right: 12rem;
+    margin-bottom: 1rem;
+}
+.logout2:hover{
+    color: yellow;
+    transform: translate(-12px, -12px);
+
+}
+.logout2:hover::before{
+    
+    transform: translate(12px, 12px);
+    
+}
+.logout2:hover::after{
+    transform: translate(6px, 6px);
+    
+}
+
