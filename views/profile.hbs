@@ -32,6 +32,13 @@
             </form>
         </div>
     </nav>
+    <form method="post" action="/home" enctype="multipart/form-data">
+        <div class="photo_div">
+            <h3><b><label for="file">Choose profile picture to upload</label></b></h3><hr>
+            <input type="file" id="profile_pic" name="profile_pic">
+            <button class="logout3" type="submit">save photo</button>  
+        </div>    
+    </form>  
     <form action="/profile/{{user._id}}" method="post">
         <div class="boxcon">
             <div class="container">
@@ -47,6 +54,7 @@
 
             <div class="container2">
                 <div class="text-l">
+                   
                     <img src="people.jpg">
                     <h3><b>Profile</b> <hr></h3> 
                     <div class="colum">
@@ -111,7 +119,7 @@
         <button class="logout" type="submit">save</button>
     </form>
     <form action="/profile/{{user._id}}" method="post">
-        <h1 style="padding-top:2rem; padding-left: 3rem ">Grade Edit <img src="pen.png" alt="pencil" style="padding-left:2rem; width:80px;"> <hr></h1><br>
+        <h1 style="padding-top:2rem; padding-left: 3rem ">Grade Edit  2565/1 :<img src="pen.png" alt="pencil" style="padding-left:2rem; width:80px;"> <hr></h1><br>
         <div class="row4">
             <div class="boxcon2">
                 <div class="subject">

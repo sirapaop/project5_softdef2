@@ -202,6 +202,10 @@ const LogInSchema = new mongoose.Schema({
         type: String,
         require: true
     },
+    Picture:{
+        type: String,
+        require: true
+    }
 
 })
 

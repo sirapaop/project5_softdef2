@@ -4,21 +4,13 @@ const cookieParser = require("cookie-parser")
 const sessions = require('express-session')
 const path = require("path")
 const hbs = require("hbs")
+const multer = require("multer")
 const collection = require("./mongodb")
+const { default: mongoose } = require("mongoose")
 
 //const user = require("../model/user")
 
 const tempelatePath = path.join(__dirname, '../views')
-
-
-const oneDay = 1000 * 60 * 60 * 24;
-app.use(sessions({
-    secret: "Thisismysecretekey",
-    saveUninitialized: true,
-    cookie: {maxAge: oneDay},
-    resave: false
-}));
-
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}));
@@ -32,10 +24,69 @@ app.use(express.static(path.join("public")));
 app.use(express.static(path.join("src")));
 app.use(cookieParser());
 
+app.use(express.static('public'))
+
 
 const myusername = 'admin'
 const mypassword = '12345'
 var session;
+
+let storage = multer.diskStorage({
+    destination:'public',
+    filename: (req, file, cb) =>{
+        cb(null, Date.now() + file.originalname)
+    
+    }
+})
+
+let upload = multer({
+    storage: storage,
+    fileFilter:(req, file, cb) =>{
+        if(
+            file.mimetype == 'image/jpeg'||
+            file.mimetype == 'image/jpg' ||
+            file.mimetype == 'image/png' ||
+            file.mimetype == 'image/gif' 
+        ){
+            cb(null, true)     
+        }
+        else{
+            cb(null, false)
+            cb(new Error('Only jpeg, jpg, png, gif image allow!!'))
+        }       
+    }
+})
+
+let myschema = mongoose.Schema({
+    Picture : String
+})
+
+let mymodel = mongoose.model('table', myschema)
+
+
+app.post("/singlepost/", upload.single('profile_pic'), (req, res) =>{
+ 
+    req.file
+    mymodel.create({Picture: req.file.filename})
+    res.send(req.file.filename)
+    .then((x) =>{
+        res.redirect('/view')
+        
+    })
+    .catch((y) =>{
+        console.log(y)
+    })
+    
+})
+
+const oneDay = 1000 * 60 * 60 * 24;
+app.use(sessions({
+    secret: "Thisismysecretekey",
+    saveUninitialized: true,
+    cookie: {maxAge: oneDay},
+    resave: false
+}));
+
 
 app.get("/",(req,res) =>{
     // res.send("Hello")
@@ -46,6 +97,12 @@ app.get("/",(req,res) =>{
     res.render("login")   
 })
 
+app.get("/view",(req,res) =>{
+    mymodel.find({},function(err, store){
+        res.render("home", {x:store})
+        console.log(store)
+    })
+})
 
 app.get("/signup",(req,res) =>{
     res.render("signup")
@@ -95,6 +152,23 @@ app.get("/home", async(req,res) =>{
     
 })
 
+app.post("/home", async(req,res) =>{
+    
+    session = req.session
+    if(session.name){
+        const check = await collection.findOne({name:session.name})
+        // res.render("home",{user: check});
+        mymodel.find({}, function(err, store){
+            res.render("home", {x:store, user: check})
+            console.log(store)
+        })
+    }
+    else{
+        console.log("fail")
+    }
+    
+    
+})
 
 app.post("/signup", async (req,res)=>{
 
