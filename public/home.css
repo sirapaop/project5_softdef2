@@ -7,7 +7,7 @@ body{
 .dropbtn {
     background-color: #04AA6D;
     color: white;
-    padding: 20px;
+    padding: 15px;
     font-size: 20px;
     border: none;
     cursor: pointer;
@@ -44,10 +44,10 @@ body{
 
 .dropdown-content {
     display: none;
-    padding-right: 1rem;
+    padding-right: 5rem;
     position: absolute;
     background-color: #f6f6f6;
-    min-width: 230px;
+    min-width: 200px;
     overflow: auto;
     border: 1px solid #ddd;
     z-index: 1;

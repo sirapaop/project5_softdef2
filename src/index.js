@@ -32,7 +32,7 @@ const mypassword = '12345'
 var session;
 
 let storage = multer.diskStorage({
-    destination:'public',
+    destination:'public/image',
     filename: (req, file, cb) =>{
         cb(null, Date.now() + file.originalname)
     
@@ -256,6 +256,9 @@ app.post("/profile/:UserId", async (req,res) =>{
         grade6:req.body.grade6,
         grade7:req.body.grade7,
         grade8:req.body.grade8,
+
+        gpa:req.body.gpa,
+        gpax:req.body.gpax
         
     }},{new: true})
     .then(data =>{
