@@ -51,15 +51,10 @@
     <div class="boxcon">
         <div class="container">
             <div class="photo">
-                <img src="people.jpg" alt="photo">
+                <img src="image/{{user.Picture}}" alt="photo">
                 <h4>Welcome to : <br>{{ user.name }}</h4><hr>  
-                {{#each x}}
-                    <img src="{{x.Picture}}">
-                {{/each}}
-                <p>{{table.Picture}}</p>
-                           
+                {{!-- <img src='image/{{user.Picture}}'>        --}}
             </div>
-            <img src={{x.Picture}}>
             <a href="/profile"><button class="btn2" type="submit">Edit profile</button></a>
             <a href="/grade"><button class="btn2" type="submit">Grade</button></a>
             <a href="/simulation"><button class="btn2" type="submit">Simulation</button></a>
@@ -67,7 +62,7 @@
     
         <div class="container2">
             <div class="text-l">
-                <img src="people.jpg">
+                <img src="image/{{user.Picture}}">
                 <h3><b>Profile</b> <hr></h3>
                 <div class="colum">
                     <div class="row1">

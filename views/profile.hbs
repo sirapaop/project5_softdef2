@@ -32,7 +32,7 @@
             </form>
         </div>
     </nav>
-    <form method="post" action="/home" enctype="multipart/form-data">
+    <form method="post" action="/singlepost/{{user._id}}" enctype="multipart/form-data">
         <div class="photo_div">
             <h3><b><label for="file">Choose profile picture to upload</label></b></h3><hr>
             <input type="file" id="profile_pic" name="profile_pic">

@@ -34,7 +34,7 @@ var session;
 let storage = multer.diskStorage({
     destination:'public/image',
     filename: (req, file, cb) =>{
-        cb(null, Date.now() + file.originalname)
+        cb(null, Date.now() +  file.originalname)
     
     }
 })
@@ -64,19 +64,27 @@ let myschema = mongoose.Schema({
 let mymodel = mongoose.model('table', myschema)
 
 
-app.post("/singlepost/", upload.single('profile_pic'), (req, res) =>{
+app.post("/singlepost/:UserId", upload.single('profile_pic'), (req, res) =>{
  
-    req.file
-    mymodel.create({Picture: req.file.filename})
-    res.send(req.file.filename)
-    .then((x) =>{
-        res.redirect('/view')
-        
+    // req.file
+    collection.findByIdAndUpdate(req.params.UserId, {$set:{Picture: req.file.filename}}, {new: true})
+    .then(data =>{
+        if(!data){
+            return res.status(404).json({
+                msg: "ไม่พบ record รหัส:" +req.params.UserId
+            })
+        }
+        else{
+            console.log("success")
+            res.redirect("/home")
+        }
+    }).catch(err =>{
+        return res.status(500).json({
+            msg: "ไม่สามารถ update เนื่องจาก:" +err.message
+        })
     })
-    .catch((y) =>{
-        console.log(y)
-    })
-    
+    // res.send(req.file.filename)
+    //res.redirect('home')
 })
 
 const oneDay = 1000 * 60 * 60 * 24;
@@ -208,7 +216,7 @@ app.post("/login", async (req,res)=>{
 
     })
 
-app.post("/profile/:UserId", async (req,res) =>{
+app.post("/profile/:UserId",async (req,res) =>{
     collection.findByIdAndUpdate(req.params.UserId, {$set:{       
         email:req.body.email,
         name:req.body.name,
@@ -219,7 +227,8 @@ app.post("/profile/:UserId", async (req,res) =>{
         deptment:req.body.deptment,
         university:req.body.university,
         
-    
+        // Picture:req.body.profile_pic,
+        
         phone:req.body.phone,
         line:req.body.line,
         fb:req.body.fb,
