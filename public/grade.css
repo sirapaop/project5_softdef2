@@ -142,81 +142,8 @@ body{
     display: flex;
     width: 100%;
 }
-.row1{
-    
-    font-size: 20px;
-    width: 40%;
-    /* padding: 1rem; */
-}
-.row2{
-    width: 70%;
-    padding: 1rem;
 
+.table , td {
+    text-align: center;
+    font-size: 1.6rem;
 }
-
-.row1 p{
-    margin: 0rem;
-    margin-bottom: 1.35rem;
-}
-
-.row4{
-    width: 100%;
-    border-radius: 3rem;
-    overflow: hidden;
-    background: beige;
-}
-
-.sum{
-    background: #429EBD;
-    font-size: 20px;
-    padding-left: 15rem;
-    color: antiquewhite;
-}
-
-.gpa{
-    width: 80%;
-    padding-top: 1rem;
-    display: flex;
-    justify-content: space-around;
-    
-}
-.subject{
-    padding-top: 1rem;
-    padding-left: 4rem;
-    width: 40%;
-    background: bisque;
-}
-
-.unit{
-    padding-top: 1rem;
-    padding-left: 4rem;
-    font-size: 20px;
-    background: #429EBD;
-    width: 30%;
-
-}
-
-.unit p{
-    margin: 0rem;
-    margin-bottom: 1.35rem;
-}
-.grade{
-    padding-top: 1rem;
-    font-size: 20px;
-    background: #E6E6E6;
-    padding-left: 4rem;
-    width: 30%;
-    
-}
-.grade p{
-    margin: 0rem;
-    margin-bottom: 1.35rem;
-}
-
-.boxcon2{
-    overflow: hidden;
-    display: flex;
-    width: 100%;
-    
-    
-    }

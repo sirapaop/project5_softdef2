@@ -43,72 +43,74 @@
             <a href="/simulation"><button class="btn2" type="submit">Simulation</button></a>
         </div>
 
-        <div class="container2">
-            <div class="row4">
-                <div class="boxcon2">
-                    <div class="subject">
-                        <h1>วิชา<hr></h1><br>
-                        <div class="colum">
-                            <div class="row1">
-                                <p>วิชาที่1     :</p>
-                                <p>วิชาที่2     :</p>
-                                <p>วิชาที่3     :</p>
-                                <p>วิชาที่4     :</p>
-                                <p>วิชาที่5     :</p>
-                                <p>วิชาที่6     :</p>
-                                <p>วิชาที่7     :</p>
-                                <p>วิชาที่8     :</p>
-                                
-                            </div>
-                            <div class="row1">
-                                <p>{{ user.subject1 }}</p>
-                                <p>{{ user.subject2 }}</p>
-                                <p>{{ user.subject3 }}</p>
-                                <p>{{ user.subject4 }}</p>
-                                <p>{{ user.subject5 }}</p>
-                                <p>{{ user.subject6 }}</p>
-                                <p>{{ user.subject7 }}</p>
-                                <p>{{ user.subject8 }}</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="unit">
-                        <h1>หน่วยกิต<hr></h1><br>
-                        <p>{{ user.unit1 }}</p>
-                        <p>{{ user.unit2 }}</p>
-                        <p>{{ user.unit3 }}</p>
-                        <p>{{ user.unit4 }}</p>
-                        <p>{{ user.unit5 }}</p>
-                        <p>{{ user.unit6 }}</p>
-                        <p>{{ user.unit7 }}</p>
-                        <p>{{ user.unit8 }}</p>
-
+        <div class="container2">            
+            <div class="colum">
+                <table style="width:100% ">
+                    <tr>                        
+                        <td><h1>ลำดับ<hr></h1></td>
+                        <td><h1>ชื่อวิชา<hr></h1></td>
+                        <td><h1>หน่วยกิต<hr></h1></td>
+                        <td><h1>เกรด<hr></h1></td>
+                    </tr>
+                    <tr>
+                        <td>วิชาที่ 1 :</td>
+                        <td>{{ user.subject1 }}</td>
+                        <td>{{ user.unit1 }}</td>
+                        <td>{{ user.grade1 }}</td>
+                    </tr>
+                    <tr>
+                        <td>วิชาที่ 2 :</td>
+                        <td>{{ user.subject2 }}</td>
+                        <td>{{ user.unit2 }}</td>
+                        <td>{{ user.grade2 }}</td>
+                    </tr>
+                    <tr>
+                        <td>วิชาที่ 3 :</td>
+                        <td>{{ user.subject3 }}</td>
+                        <td>{{ user.unit3 }}</td>
+                        <td>{{ user.grade3 }}</td>
+                    </tr>
+                    <tr>
+                        <td>วิชาที่ 4 :</td>
+                        <td>{{ user.subject4 }}</td>
+                        <td>{{ user.unit4 }}</td>
+                        <td>{{ user.grade4 }}</td>
+                    </tr>
+                    <tr>
+                        <td>วิชาที่ 5 :</td>
+                        <td>{{ user.subject5 }}</td>
+                        <td>{{ user.unit5 }}</td>
+                        <td>{{ user.grade5 }}</td>
+                    </tr>
+                    <tr>
+                        <td>วิชาที่ 6 :</td>
+                        <td>{{ user.subject6 }}</td>
+                        <td>{{ user.unit6 }}</td>
+                        <td>{{ user.grade6 }}</td>
+                    </tr>
+                    <tr>
+                        <td>วิชาที่ 7 :</td>
+                        <td>{{ user.subject7 }}</td>
+                        <td>{{ user.unit7 }}</td>
+                        <td>{{ user.grade7 }}</td>
+                    </tr>
+                    <tr>
+                        <td>วิชาที่ 8 :</td>
+                        <td>{{ user.subject8 }}</td>
+                        <td>{{ user.unit8 }}</td>
+                        <td>{{ user.grade8 }}</td>
+                    </tr>
+                    <tr><td><br></td></tr>
+                    <tr>
                         
-                    </div>
-                    <div class="grade">
-                        <h1>เกรด<hr></h1><br>
-                        <p>{{ user.grade1 }}</p>
-                        <p>{{ user.grade2 }}</p>
-                        <p>{{ user.grade3 }}</p>
-                        <p>{{ user.grade4 }}</p>
-                        <p>{{ user.grade5 }}</p>
-                        <p>{{ user.grade6 }}</p>
-                        <p>{{ user.grade7 }}</p>
-                        <p>{{ user.grade8 }}</p>
-                    </div>
-                </div>
-                <div class="sum">
-                    <div class="gpa">
-                        <h2>GPA :</h2><br>
-                        <p>{{user.gpa}}</p>
-                    </div>
-                    <div class="gpa">
-                        <h2>GPAX :</h2><br>
-                        <p>{{user.gpax}}</p>
-                    </div>
-                
-                </div>  
+                        <td><h2>GPA :</h2></td>
+                        <td>{{user.gpa}}</td>
+                    </tr>
+                    <tr>
+                        <td><h2>GPAX :</h2></td>
+                        <td>{{user.gpax}}</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
