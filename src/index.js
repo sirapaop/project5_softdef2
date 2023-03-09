@@ -5,7 +5,7 @@ const sessions = require('express-session')
 const path = require("path")
 const hbs = require("hbs")
 const multer = require("multer")
-const collection = require("./mongodb")
+const collection = require("../src/mongodb")
 const { default: mongoose } = require("mongoose")
 
 //const user = require("../model/user")
@@ -71,16 +71,16 @@ app.post("/singlepost/:UserId", upload.single('profile_pic'), (req, res) =>{
     .then(data =>{
         if(!data){
             return res.status(404).json({
-                msg: "ไม่พบ record รหัส:" +req.params.UserId
+                msg: "ไม่พบ record รหัส:" + req.params.UserId
             })
         }
         else{
-            console.log("success")
+            console.log("Upload image success")
             res.redirect("/home")
         }
     }).catch(err =>{
         return res.status(500).json({
-            msg: "ไม่สามารถ update เนื่องจาก:" +err.message
+            msg: "ไม่สามารถ update เนื่องจาก:" + err.message
         })
     })
     // res.send(req.file.filename)
@@ -217,6 +217,36 @@ app.post("/login", async (req,res)=>{
     })
 
 app.post("/profile/:UserId",async (req,res) =>{
+    if(req.body.thainame == ""){
+        req.body.thainame = "none"
+    }
+    if(req.body.nickname == ""){
+        req.body.nickname = "none"
+    }
+    if(req.body.deptment == ""){
+        req.body.deptment = "none"
+    }
+    if(req.body.mentor == ""){
+        req.body.mentor = "none"
+    }
+    if(req.body.mentor == ""){
+        req.body.mentor = "none"
+    }
+
+
+    if(req.body.phoe == ""){
+        req.body.phone = "none"
+    }
+    if(req.body.line == ""){
+        req.body.line = "none"
+    }
+    if(req.body.fb == ""){
+        req.body.mentor = "none"
+    }
+    if(req.body.ig == ""){
+        req.body.mentor = "none"
+    }
+
     collection.findByIdAndUpdate(req.params.UserId, {$set:{       
         email:req.body.email,
         name:req.body.name,

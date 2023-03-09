@@ -76,8 +76,7 @@ body{
     
 }
 .container{
-    /* display: flex; */
-    width: 400px;
+    width: 600px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
@@ -91,15 +90,13 @@ body{
     
 }
 .photo img {
-    width: 120px;
+    width: 150px;
+    height: 150px;    
     overflow: hidden;
     border-radius: 50%;
-    border-bottom: #000;
-    padding-left: 1rem;
-
 }
-.photo h4 {
-    margin-left: 4rem;
+.photo h4{
+    padding-left: 3rem;
 }
 
 .btn2{
@@ -196,34 +193,14 @@ body{
     
 }
 
-.text-r h3{
-    padding-top: 2rem;
-    padding: 0rem ;
-}
 .colum{
     display: flex;
     width: 100%;
     margin-top: 0%;
 }
-.row1{
-    width: 40%;
-    padding: 1rem;
-}
-.row2{
-    width: 70%;
-    font-size: 20px;
-    padding: 1rem;
 
-}
-.row2 p{
-    margin-bottom: 1.35rem;
-    font-size: 20px;
-}
-
-.row1 p{
-    margin: 0rem;
-    font-size: 20px;
-    margin-bottom: 1.35rem;
-}
+.table, tr, td{
+    padding: 0.8rem;
+} 
 
 

@@ -65,73 +65,88 @@
                 <img src="image/{{user.Picture}}">
                 <h3><b>Profile</b> <hr></h3>
                 <div class="colum">
-                    <div class="row1">
-                        <p>student ID     :</p>
-                        <p>Name           :</p>
-                        <p>TH Name        :</p>
-                        {{!-- <P>University     :</P>                      --}}
-                        <p>Nickname       :</p>
-                        <P>Deptment       :</P>
-                        <p>Mentor Teacher :</p>
-                    </div>
-                    <div class="row2">
-                        <p>{{ user.studentId }}</p>
-                        <p>{{ user.name }}</p>
-                        <p>{{ user.thainame }}</p> 
-                        <p>{{ user.nickname }}</p> 
-                        {{!-- <p>{{ user.university }}</p>  --}}
-                        <P>{{ user.deptment }}</P>                   
-                        <p>{{ user.mentor }}</p>
-                    </div>
+                    <table style="width:100%">
+                        <tr>
+                            <td>student ID     :</td>
+                            <td>{{ user.studentId }}</td>
+                        </tr>
+                        <tr>
+                            <td>Name           :</td>
+                            <td>{{ user.name }}</td>
+                        </tr>
+                        <tr>
+                            <td>TH Name        :</td>
+                            <td>{{ user.thainame }}</td>
+                        </tr>
+                        <tr>
+                            <td>Nickname       :</td>
+                            <td>{{ user.nickname }}</td>
+                        </tr>
+                        <tr>
+                            <td>Department     :</td>
+                            <td>{{ user.deptment }}</td>
+                        </tr>
+                        <tr>
+                            <td>Mentor Teacher :</td>
+                            <td>{{ user.mentor }}</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
 
             <div class="text-r">
                 <h3><b>Contract</b> <hr></h3>
                <div class="colum">
-                    <div class="row1">
-                        <p>Email      :</p>
-                        <p>phone      :</p>
-                        <p>line ID    :</p>
-                        <p>facebook   :</p>
-                        <p>Instagram  :</p>
-                    </div>
-                    <div class="row2">
-                        <p>{{ user.email }}</p>
-                        <p>{{ user.phone }}</p>
-                        <p>{{ user.line }} </p>
-                        <p>{{ user.fb }}   </p>
-                        <p>{{ user.ig }}   </p>  
-                    </div>
+                    <table style="width:100%">
+                        <tr>
+                            <td>Email      :</td>
+                            <td>{{ user.email }}</td>
+                        </tr>
+                        <tr>
+                            <td>phone      :</td>
+                            <td>{{ user.phone }}</td>
+                        </tr>
+                        <tr>
+                            <td>line ID    :</td>
+                            <td>{{ user.line }}</td>
+                        </tr>
+                        <tr>
+                            <td>facebook   :</td>
+                            <td>{{ user.fb }}</td>
+                        </tr>
+                        <tr>
+                            <td>Instagram  :</td>
+                            <td>{{ user.ig }} </td>
+                        </tr>
+                    </table>
                </div>
                 
 
-                <h3><b>personal information</b><hr></h3>
+                <h3 style="padding-top: 1rem;"><b>personal information</b><hr></h3>
                 <div class="colum">
-                    <div class="row1">
-                        <p>Birth day  :</p>
-                        <p>Blood tpye :</p>
-                        <p>Address    :</p>
-                        <p>Allergies  :</p>
-                    </div>
-                    <div class="row2">
-                        <p>{{ user.hbd }}</p>
-                        <p>{{ user.blood }}</p>
-                        <p>{{ user.address }}</p>
-                        <p>{{ user.allergies }}</p>
- 
-                    </div>
+                    <table style="width:100%">
+                        <tr>
+                            <td>Birth day  :</td>
+                            <td>{{ user.hbd }}</td>
+                        </tr>
+                        <tr>
+                            <td>Blood tpye :</td>
+                            <td>{{ user.blood }}</td>
+                        </tr>
+                        <tr>
+                            <td>Address    :</td>
+                            <td>{{ user.address }}</td>
+                        </tr>
+                        <tr>
+                            <td>Allergies  :</td>
+                            <td>{{ user.allergies }}</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
     <a href="/login"><button class="logout" type="submit">Log out</button></a>
-    
-
-    
-    
-
-
 </body>
 </html>
 
