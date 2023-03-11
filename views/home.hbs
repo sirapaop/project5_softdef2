@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-sm bg-darknavbar navbar-expand-sm bg-dark navbar-dark ">
     
         <a class="navbar-brand" href="#">
             <img src="CDTI.png" style="height: 70px;">
@@ -46,12 +46,14 @@
                 </div>
             {{!-- </form> --}}
         </div>
-    </nav>
+    </nav><br>
     
     <div class="boxcon">
         <div class="container">
-            <div class="photo">            
-                <img src="image/{{user.Picture}}" alt="photo">
+            <div class="photo"> 
+                <img src="people.jpg" class="img1">  
+                <img src="image/{{user.Picture}}" >         
+                <img src="image/{{user.Picture}}" class="img1">
                 <h4>Welcome to : <br>{{ user.name }}</h4><hr>  
                 {{!-- <img src='image/{{user.Picture}}'>        --}}
             </div>
@@ -62,7 +64,10 @@
     
         <div class="container2">
             <div class="text-l">
-                <img src="image/{{user.Picture}}">
+                <div class="box">
+                    <img src="people.jpg" >  
+                    <img src="image/{{user.Picture}}" class="img1">
+                </div>
                 <h3><b>Profile</b> <hr></h3>
                 <div class="colum">
                     <table style="width:100%">

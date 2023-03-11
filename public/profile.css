@@ -16,7 +16,7 @@ body{
 }
 .container{
     /* display: flex; */
-    width: 400px;
+    width: 600px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
@@ -26,19 +26,18 @@ body{
 
 .photo{
     display: flex;
+    background-size: contain;
     align-items: center;
     
 }
 .photo img {
-    width: 120px;
+    width: 150px;
+    height: 150px;    
     overflow: hidden;
     border-radius: 50%;
-    border-bottom: #000;
-    padding-left: 1rem;
-
 }
-.photo h4 {
-    margin-left: 4rem;
+.photo h4{
+    padding-left: 3rem;
 }
 
 .btn2{
@@ -237,7 +236,7 @@ width: 100%;
 
 .gpa{
     width: 80%;
-    padding-top: 1rem;
+    padding-top: 2rem;
     display: flex;
     justify-content: space-around;
     
@@ -281,4 +280,25 @@ width: 100%;
     z-index: 999;
     
 
+}
+
+.img1{
+    position: absolute;
+    background-size: contain;
+}
+
+.grade{
+    padding-top: 1rem;
+    font-size: 20px;
+    background: #E6E6E6;
+    padding-left: 4rem;
+    width: 30%;
+    
+}
+.grade select{
+    width: 60%;
+    border-radius: 2rem;
+    margin: 0rem;
+    margin-bottom: 1.3rem;
+    padding-left: 2rem;
 }
