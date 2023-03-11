@@ -86,6 +86,7 @@ body{
 .photo{
     display: flex;
     align-items: center;
+    
     background-size: contain;
     
 }
