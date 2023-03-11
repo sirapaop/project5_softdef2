@@ -68,8 +68,8 @@ body{
 
 
 .logout{
-    background: #1C1C1C;
-    color: #E6E6E6;
+    background: #fdb095;
+    color: #210440;
     width: 12rem;
     border-radius: 30px;
     transition: all 0.25s ease;
@@ -82,7 +82,7 @@ body{
     margin-bottom: 1rem;
 }
 .logout:hover{
-    color: yellow;
+    color: whitesmoke;
     transform: translate(-12px, -12px);
 
 }
@@ -167,7 +167,7 @@ body{
 }
 
 .sum{
-    background: red;
+    background: #210440;
     font-size: 20px;
     padding-top: 2rem;
     /* align-items:; */
@@ -240,8 +240,8 @@ body{
 }
 
 .logout2{
-    background: #1C1C1C;
-    color: #E6E6E6;
+    background: #fdb095;
+    color: #210440;
     width: 12rem;
     border-radius: 30px;
     transition: all 0.25s ease;
@@ -254,7 +254,7 @@ body{
     margin-bottom: 1rem;
 }
 .logout2:hover{
-    color: yellow;
+    color: whitesmoke;
     transform: translate(-12px, -12px);
 
 }
